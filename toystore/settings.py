@@ -37,8 +37,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
     # Additional packages
     'rest_framework',
+    'rest_framework.authtoken',
 
     # Django Apps
     'toyapi'
@@ -76,15 +78,27 @@ TEMPLATES = [
 WSGI_APPLICATION = 'toystore.wsgi.application'
 
 
-# Database
+# Remote Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
 
+# Remote MySQL Database
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'project_mount',
+        'USER': 'admin',
+        'PASSWORD': 'projectmount',
+        'HOST': 'remote-mount.cqrovybm8cek.us-east-1.rds.amazonaws.com',
+        'PORT': '3306',
     }
 }
+
 
 
 # Password validation
@@ -127,3 +141,10 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.TokenAuthentication'
+    ]
+}
