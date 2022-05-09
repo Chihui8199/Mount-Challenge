@@ -8,6 +8,6 @@ from rest_framework. viewsets import ModelViewSet
 
 class ToyView(ModelViewSet):
    permission_classes = (IsAuthenticated, )
-   
+   lookup_field = 'toy_item'
    serializer_class = ToySerializer
    queryset = Toy.objects.all()
