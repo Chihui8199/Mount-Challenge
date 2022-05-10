@@ -1,45 +1,127 @@
 # Mount-Challenge
 Coding Test: Simple Application for a Toy Store API
 
-Backend: Django Framework 
+Backend: Django Framework, MySQL Database
   
 ## Installation
 
 ### Git clone
 ```bash
-git clone <insert link>
+git clone https://github.com/Chihui8199/Mount-Challenge.git
 ```
 
 # Backend Setup
 ## 1. Install Dependencies
 - Python 3.9.0
+- MYSQL Workbench
 
 ## 2. Setting Up the Virtual Environment
-1. Set up a new virtual environment
-	> python -m venv env
+1. Set up a new virtual environment 
+``` 
+python -m venv .venv
+```
 
 2. Activate the virtual environment
-	> \env\Scripts\activate.bat
+```
+. .venv/bin/activate 
+``` 
 
 3. Install required libraries
-    > pip install -r requirements.txt 
+```
+pip install -r requirements.txt 
+```
 
+## 3. Set-up MySQL Workbench
+1. Create new SQL connection (Remote)
+   
+    a. Connection Name:
+    ```
+   remote project_mount
+   ```
+ 
+    b. Hostname:
+    ```
+    remote-mount.cqrovybm8cek.us-east-1.rds.amazonaws.com
+    ```
+ 
+    c. Port:
+    ```
+   3306
+    ```
 
+    d. Username:
+    ```
+    admin
+    ```
+   
+    e. Password:
+    ```
+    projectmount
+    ```
+   
+    f. Default Schema:
 
+    ```
+    project_mount
+    ```
+   
 ## 4. Setting up Project 
 1. Migrate all the default Django tables to your MySQL schema.
-	> python manage.py makemigrations
+ ```
+ python manage.py makemigrations
+ ```
 
-	> python manage.py migrate
+```
+python manage.py migrate
+```
 
 ## 5. Running The Server
-1. > python manage.py runserver
+1. Start the Server
+``` 
+python manage.py runserver
+```
 2. Open http://localhost:8000
 
-## 6. List of API URLs
+## 6. List of available API URLs
+1. To view APIs available
+    > http://127.0.0.1:8000/api/
 
-- Toy Api:
-	> http://localhost:8000/toys
-    > http://localhost:8000/toys/Cars
+2. To enter to admin dashboard
+    > http://127.0.0.1:8000/admin
+   - Username: admin
+   - Password: admin
+   
+3. To view Toy API:
+    > Get all toys: http://127.0.0.1:8000/api/toys
+   
+    > Get toy detail: http://127.0.0.1:8000/api/toys/Barbie
 
+## 7. To run unit testing
+```
+python manage.py test
+```
 
+## 8. Testing API endpoints with Postman
+1. Get Bearer token
+You can either create a new superuser, log in to admin dashboard and get a new token. Else, you can use the one I have created
+
+To create new superuser
+```
+python manage.py createsuperuser
+```
+
+Alternatively:
+use this token: 
+```
+Token 1a7c6c72cbd555127539919ba71ee58743ca12ea
+```
+
+2. Test API using Postman
+   1. Get request for all toys
+      * Under the authorization tab, select API key under tab and update the Value field with the given bearer token
+      * ![](/Users/chihui/Sites/Mount-Challenge/Guide Images/Get all Toys.png)
+   2. Get request for a specfic toy
+   3. Post request for a new toy
+   4. Delete request for an existing toy
+
+   

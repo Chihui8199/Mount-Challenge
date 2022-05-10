@@ -1,6 +1,6 @@
 from django.urls import path, include
 from rest_framework import routers
-from toyapi.views import ToyViewSet
+from toys.views import ToyViewSet
 
 # URL Configuration
 router = routers.DefaultRouter()

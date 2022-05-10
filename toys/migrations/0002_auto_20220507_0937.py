@@ -6,7 +6,7 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('toyapi', '0001_initial'),
+        ('toys', '0001_initial'),
     ]
 
     operations = [
