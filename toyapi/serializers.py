@@ -1,6 +1,7 @@
 from rest_framework import serializers
 from .models import Toy
 
+
 class ToySerializer(serializers.ModelSerializer):
     class Meta:
         model = Toy
@@ -9,4 +10,3 @@ class ToySerializer(serializers.ModelSerializer):
         extra_kwargs = {
             'url': {'lookup_field': 'toy_item'}
         }
-    

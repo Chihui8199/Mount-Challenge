@@ -1,11 +1,11 @@
 from django.urls import path, include
 from rest_framework import routers
-from toyapi.views import ToyView
+from toyapi.views import ToyViewSet
 
 # URL Configuration
 router = routers.DefaultRouter()
-router.register('toys', ToyView)
+router.register('toys', ToyViewSet)
 
 urlpatterns = [
-    path ('api/', include(router.urls))
+    path('api/', include(router.urls))
 ]
