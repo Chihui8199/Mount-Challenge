@@ -150,12 +150,12 @@ Token 1a7c6c72cbd555127539919ba71ee58743ca12ea
 
       - Change field to GET request: http://127.0.0.1:8000/api/toys/
       - Under the authorization tab, select API key under tab and update the Value field with the given bearer token
-      - ![](Guide%20Images/Get%20all%20Toys.png)
+      ![](Guide%20Images/Get%20all%20Toys.png)
 
    2. Get request for a specfic toy
       - Change field to GET request: http://127.0.0.1:8000/api/toys/Bottle/
       - Under the authorization tab, select API key under tab and update the Value field with the given bearer token
-      - ![](Guide%20Images/Get%20Toy%20by%20name.png)
+      ![](Guide%20Images/Get%20Toy%20by%20name.png)
    3. Post request for a new toy
       - Change field to POST request: http://127.0.0.1:8000/api/toys/http://127.0.0.1:8000/api/toys/
       - Under the authorization tab, select API key under tab and update the Value field with the given bearer token
@@ -170,4 +170,4 @@ Token 1a7c6c72cbd555127539919ba71ee58743ca12ea
    4. Delete request for an existing toy
       - Change field to DELETE request: http://127.0.0.1:8000/api/toys/Toy1000/
       - Under the authorization tab, select API key under tab and update the Value field with the given bearer token
-      - ![](Guide%20Images/Delete%20toy%20by%20name.png)
+      ![](Guide%20Images/Delete%20toy%20by%20name.png)
