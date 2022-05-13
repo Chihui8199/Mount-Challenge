@@ -5,4 +5,3 @@ django-rest-auth==0.9.5
 sqlparse==0.4.2
 pytz==2019.3
 six==1.12.0
-sqlparse==0.3.0
