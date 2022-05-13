@@ -166,7 +166,7 @@ Token 1a7c6c72cbd555127539919ba71ee58743ca12ea
       "price": "2.10"
       }
       ```
-      - ![](Guide%20Images/Post%20a%20new%20toy.png)
+      ![](Guide%20Images/Post%20a%20new%20toy.png)
    4. Delete request for an existing toy
       - Change field to DELETE request: http://127.0.0.1:8000/api/toys/Toy1000/
       - Under the authorization tab, select API key under tab and update the Value field with the given bearer token
