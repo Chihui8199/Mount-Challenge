@@ -5,7 +5,10 @@ from rest_framework.authtoken.models import Token
 from rest_framework.test import APITestCase
 
 
-# TODO: Use faker to generate data automatically
+"""
+Unit tests for ToyViewSetAPI
+"""
+
 class ToyViewSetAPIViewTests(APITestCase):
     toys_url = reverse('toy-list')
     toy_detail_url = reverse('toy-detail', args=['Toy2'])

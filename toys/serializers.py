@@ -3,6 +3,10 @@ from .models import Toy
 
 
 class ToySerializer(serializers.ModelSerializer):
+    """
+          Declare a serializer that we can use to serialize and deserialize data that corresponds to Toy objects
+    """
+
     class Meta:
         model = Toy
         fields = ('id', 'toy_item', 'price')

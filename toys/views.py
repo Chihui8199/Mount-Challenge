@@ -1,4 +1,3 @@
-from django.shortcuts import render
 from .models import Toy
 from .serializers import ToySerializer
 
@@ -8,7 +7,7 @@ from rest_framework.viewsets import ModelViewSet
 
 
 class ToyViewSet(ModelViewSet):
-   permission_classes = (IsAuthenticated,)
-   lookup_field = 'toy_item'
-   serializer_class = ToySerializer
-   queryset = Toy.objects.all()
+    permission_classes = (IsAuthenticated,)
+    lookup_field = 'toy_item'
+    serializer_class = ToySerializer
+    queryset = Toy.objects.all()

@@ -1,5 +1,10 @@
 from django.db import models
 
+"""
+   A class used to represent an Toy model class
+   
+"""
+
 
 class Toy(models.Model):
     toy_item = models.CharField(max_length=200, unique=True)
