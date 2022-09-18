@@ -2,6 +2,9 @@
 
 Coding Test: Simple Application for a Toy Store API
 
+Note: Sorry for the security vulnerabilities! This project is not longer maintained!
+
+
 Backend: Django Framework, MySQL Database
 
 ## Installation
